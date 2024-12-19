@@ -22,7 +22,7 @@ const WeatherPreview = ({ weather, location }: Props) => {
     sessionStorage.setItem("favorites", JSON.stringify(newFavorites));
   };
   return (
-    <div className="relative flex grow flex-col items-center gap-6 text-lg">
+    <div className="relative flex grow flex-col items-center gap-6 text-sm md:text-lg">
       <HeartIcon
         onClick={() => toggleFavorite()}
         className={`absolute right-4 top-4 w-6 cursor-pointer ${isFavorite ? "text-red-800" : ""}`}
@@ -35,7 +35,7 @@ const WeatherPreview = ({ weather, location }: Props) => {
         }
         alt={weather.condition.text}
       />
-      <div className="flex items-center gap-2 text-[4rem]">
+      <div className="flex items-center gap-2 md:text-[4rem]">
         <h2>{isCelsius ? `${weather.temp_c} °C` : `${weather.temp_f} °F`}</h2>
         <ToggleButton checked={isCelsius} updateStatus={setIsCelsius} name="" />
       </div>
@@ -43,14 +43,14 @@ const WeatherPreview = ({ weather, location }: Props) => {
 
       <div className="flex w-full justify-between">
         <div className="flex gap-2 text-center">
-          <HumidityIcon className="w-6 text-white" />
+          <HumidityIcon className="hidden w-6 text-white md:block" />
           <div className="flex flex-col">
             {weather.humidity}
             <span>Humidity</span>
           </div>
         </div>
         <div className="flex gap-2 text-center">
-          <WindIcon className="w-7" />
+          <WindIcon className="hidden w-7 md:block" />
           <div className="flex flex-col">
             {weather.wind_kph} kph
             <span>Wind Speed</span>

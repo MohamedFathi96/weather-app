@@ -24,7 +24,7 @@ const HistoryPage = () => {
                 onClick={() => historyClickHandler(location, weather)}
                 className="flex cursor-pointer flex-col gap-2 rounded-lg px-2 hover:shadow-2xl"
               >
-                <div className="text-lg font-semibold text-white">
+                <div className="text-sm font-semibold text-white md:text-lg">
                   {location.name}, {location.region}
                 </div>
                 <div className="flex gap-4">
