@@ -35,8 +35,9 @@ const WeatherPreview = ({ weather, location }: Props) => {
         }
         alt={weather.condition.text}
       />
-      <div className="flex flex-col items-center gap-2 text-[4rem]">
+      <div className="flex items-center gap-2 text-[4rem]">
         <h2>{isCelsius ? `${weather.temp_c} °C` : `${weather.temp_f} °F`}</h2>
+        <ToggleButton checked={isCelsius} updateStatus={setIsCelsius} name="" />
       </div>
       <h3>{location.name}</h3>
 
