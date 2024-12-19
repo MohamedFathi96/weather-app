@@ -36,7 +36,11 @@ const HistoryPage = () => {
                       Condition: {weather.condition.text}
                     </div>
                   </div>
-                  <img src={weather.condition.icon} alt="weather icon" />
+                  <img
+                    src={weather.condition.icon}
+                    alt="weather icon"
+                    className="hidden md:block"
+                  />
                 </div>
               </div>
             ))}

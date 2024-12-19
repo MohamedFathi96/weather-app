@@ -48,7 +48,7 @@ const SearchInput = ({ updateLocation }: Props) => {
           type="search"
           name="search"
           placeholder="Search..."
-          className="grow rounded-lg p-2 outline-none"
+          className="w-full grow rounded-lg p-2 outline-none"
           autoComplete="off"
           autoFocus
           value={searchValue}
